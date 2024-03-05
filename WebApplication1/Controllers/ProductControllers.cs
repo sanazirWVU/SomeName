@@ -8,7 +8,9 @@ public class ProductController : Controller
 
 	protected IActionResult Index()
 	{
+		var listOfProducts = _dbContext.Products.ToList();
 
-		//will need some code
+		return View(listOfProducts);
+
 	}
 }
